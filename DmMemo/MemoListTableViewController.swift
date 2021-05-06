@@ -6,19 +6,52 @@
 //
 
 import UIKit
-
+ 
 class MemoListTableViewController: UITableViewController {
+    //날짜 출력
     let formatter: DateFormatter = {
         let f = DateFormatter()
+        //날짜 스타일
         f.dateStyle = .long
+        //시간 스타일
         f.timeStyle = .short
+        //국가,언어 설정
         f.locale = Locale(identifier: "Ko_kr")
+        //리턴
         return f
     }()
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //reloadData : 데이터소스가 전달해주는 최신 데이터로 업로드
+        //tableView.reloadData()
+        //출력
+        //print(#function)
+    }
+    
+    //옵저버를 해제할때 사용하는 객체 리턴 (token)
+    var token: NSObjectProtocol?
+    
+    //소멸자
+    deinit {
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //notification에서 ComposeViewController 사용
+       token = NotificationCenter.default.addObserver(
+            forName: ComposeViewController.newMemoDidInsert,
+            object: nil,
+            //UI업데이트는 무조건 메인 스레드에서 수행
+            queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData()
+            
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
