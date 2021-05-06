@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		7A11898F2641599600B82BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11898E2641599600B82BD5 /* AppDelegate.swift */; };
 		7A1189912641599600B82BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1189902641599600B82BD5 /* SceneDelegate.swift */; };
-		7A1189932641599600B82BD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1189922641599600B82BD5 /* ViewController.swift */; };
 		7A1189962641599600B82BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1189942641599600B82BD5 /* Main.storyboard */; };
 		7A1189992641599600B82BD5 /* DmMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A1189972641599600B82BD5 /* DmMemo.xcdatamodeld */; };
 		7A11899B2641599C00B82BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A11899A2641599C00B82BD5 /* Assets.xcassets */; };
 		7A11899E2641599C00B82BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A11899C2641599C00B82BD5 /* LaunchScreen.storyboard */; };
+		7AA394B22643DCB600A9A030 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA394B12643DCB600A9A030 /* ComposeViewController.swift */; };
+		7AD5FC2E2641A939004A8D21 /* Medol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5FC2D2641A939004A8D21 /* Medol.swift */; };
+		7AD5FC312641AC36004A8D21 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5FC302641AC36004A8D21 /* MemoListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A11898B2641599600B82BD5 /* DmMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DmMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A11898E2641599600B82BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A1189902641599600B82BD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7A1189922641599600B82BD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7A1189952641599600B82BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A1189982641599600B82BD5 /* DmMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DmMemo.xcdatamodel; sourceTree = "<group>"; };
 		7A11899A2641599C00B82BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A11899D2641599C00B82BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A11899F2641599C00B82BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AA394B12643DCB600A9A030 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		7AD5FC2D2641A939004A8D21 /* Medol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medol.swift; sourceTree = "<group>"; };
+		7AD5FC302641AC36004A8D21 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,26 @@
 		7A11898D2641599600B82BD5 /* DmMemo */ = {
 			isa = PBXGroup;
 			children = (
+				7AD5FC2C2641A8FE004A8D21 /* Model */,
 				7A11898E2641599600B82BD5 /* AppDelegate.swift */,
 				7A1189902641599600B82BD5 /* SceneDelegate.swift */,
-				7A1189922641599600B82BD5 /* ViewController.swift */,
 				7A1189942641599600B82BD5 /* Main.storyboard */,
 				7A11899A2641599C00B82BD5 /* Assets.xcassets */,
 				7A11899C2641599C00B82BD5 /* LaunchScreen.storyboard */,
 				7A11899F2641599C00B82BD5 /* Info.plist */,
 				7A1189972641599600B82BD5 /* DmMemo.xcdatamodeld */,
+				7AD5FC302641AC36004A8D21 /* MemoListTableViewController.swift */,
+				7AA394B12643DCB600A9A030 /* ComposeViewController.swift */,
 			);
 			path = DmMemo;
+			sourceTree = "<group>";
+		};
+		7AD5FC2C2641A8FE004A8D21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AD5FC2D2641A939004A8D21 /* Medol.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A1189932641599600B82BD5 /* ViewController.swift in Sources */,
 				7A11898F2641599600B82BD5 /* AppDelegate.swift in Sources */,
 				7A1189992641599600B82BD5 /* DmMemo.xcdatamodeld in Sources */,
+				7AD5FC312641AC36004A8D21 /* MemoListTableViewController.swift in Sources */,
+				7AA394B22643DCB600A9A030 /* ComposeViewController.swift in Sources */,
 				7A1189912641599600B82BD5 /* SceneDelegate.swift in Sources */,
+				7AD5FC2E2641A939004A8D21 /* Medol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
