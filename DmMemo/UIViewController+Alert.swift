@@ -16,6 +16,8 @@ extension UIViewController {
                                       //경고창 스타일 설정
                                       preferredStyle:
                                         .alert)
+        
+        
         //경고창에 표시될 버튼 생성
         let okAction = UIAlertAction(title: "확인",
                                      //버튼의 스타일 default

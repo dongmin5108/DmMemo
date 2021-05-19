@@ -13,6 +13,7 @@
 		7A1189992641599600B82BD5 /* DmMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A1189972641599600B82BD5 /* DmMemo.xcdatamodeld */; };
 		7A11899B2641599C00B82BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A11899A2641599C00B82BD5 /* Assets.xcassets */; };
 		7A11899E2641599C00B82BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A11899C2641599C00B82BD5 /* LaunchScreen.storyboard */; };
+		7A5FF655264BC0EF00EB0BB0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FF654264BC0EF00EB0BB0 /* DataManager.swift */; };
 		7AA394B22643DCB600A9A030 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA394B12643DCB600A9A030 /* ComposeViewController.swift */; };
 		7AA394B52643E74400A9A030 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA394B42643E74400A9A030 /* UIViewController+Alert.swift */; };
 		7AB63053264419AE00A14F55 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB63052264419AE00A14F55 /* DetailViewController.swift */; };
@@ -29,6 +30,8 @@
 		7A11899A2641599C00B82BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A11899D2641599C00B82BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A11899F2641599C00B82BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A5FF654264BC0EF00EB0BB0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		7A622BF02653DF5000299867 /* DmMemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DmMemo.entitlements; sourceTree = "<group>"; };
 		7AA394B12643DCB600A9A030 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		7AA394B42643E74400A9A030 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		7AB63052264419AE00A14F55 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +69,8 @@
 		7A11898D2641599600B82BD5 /* DmMemo */ = {
 			isa = PBXGroup;
 			children = (
+				7A622BF02653DF5000299867 /* DmMemo.entitlements */,
+				7A5FF653264BC0D900EB0BB0 /* Data */,
 				7AD5FC2C2641A8FE004A8D21 /* Model */,
 				7A11898E2641599600B82BD5 /* AppDelegate.swift */,
 				7A1189902641599600B82BD5 /* SceneDelegate.swift */,
@@ -80,6 +85,14 @@
 				7AB63052264419AE00A14F55 /* DetailViewController.swift */,
 			);
 			path = DmMemo;
+			sourceTree = "<group>";
+		};
+		7A5FF653264BC0D900EB0BB0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7A5FF654264BC0EF00EB0BB0 /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		7AD5FC2C2641A8FE004A8D21 /* Model */ = {
@@ -167,6 +180,7 @@
 				7A1189912641599600B82BD5 /* SceneDelegate.swift in Sources */,
 				7AD5FC2E2641A939004A8D21 /* Medol.swift in Sources */,
 				7AA394B52643E74400A9A030 /* UIViewController+Alert.swift in Sources */,
+				7A5FF655264BC0EF00EB0BB0 /* DataManager.swift in Sources */,
 				7AB63053264419AE00A14F55 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DmMemo/DmMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z492WD28HZ;
 				INFOPLIST_FILE = DmMemo/Info.plist;
@@ -324,6 +339,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WalterYun.DmMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DmMemo/DmMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z492WD28HZ;
 				INFOPLIST_FILE = DmMemo/Info.plist;
@@ -344,6 +361,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WalterYun.DmMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
